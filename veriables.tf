@@ -6,6 +6,9 @@ variable "terraform_version" {
   type    = string
   default = "1.9.8"
 }
+variable "terraform_working_directory" {
+  type = string
+}
 variable "delay_after_environment_creation" {
   type    = number
   default = 10

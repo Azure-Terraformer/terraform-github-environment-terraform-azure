@@ -19,7 +19,7 @@ resource "github_actions_environment_variable" "terraform_working_directory" {
   repository    = var.repository_name
   environment   = each.key
   variable_name = "TERRAFORM_WORKING_DIRECTORY"
-  value         = module.terraform_simple_codebase.path
+  value         = var.terraform_working_directory
 
   depends_on = [null_resource.delay_after_environment_creation]
 

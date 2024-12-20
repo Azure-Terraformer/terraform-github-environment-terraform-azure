@@ -6,7 +6,7 @@ resource "github_repository_environment" "main" {
   repository  = var.repository_name
 
   dynamic "reviewers" {
-    for_each = each.value.reviewers != null && length(each.value.reviewers) > 0 ? each.value.reviewers : []
+    for_each = each.value.reviewing_users != null && length(each.value.reviewing_users) > 0 ? [each.value.reviewing_users] : []
 
     content {
       users = [reviewers.value]

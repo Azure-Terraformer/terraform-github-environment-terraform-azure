@@ -19,7 +19,8 @@ variable "environments" {
     tenant_id       = string
     client_id       = string
     branch_name     = string
-    reviewers       = list(string)
+    reviewing_teams = list(string)
+    reviewing_users = list(string)
     backend = object({
       resource_group_name  = string
       storage_account_name = string
